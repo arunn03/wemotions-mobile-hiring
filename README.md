@@ -8,86 +8,84 @@ To build and run the app on your device, do the following:
 -   Fork/clone this repo to your computer using `https://github.com/FlicLabs/wemotions-mobile.git`.
 -   Connect your devices/emulators and run the app using `flutter run` in the root of the project directory.
   
-# wemotions-mobile-hiring
+# Wemotions Mobile Hiring
 
-### **Flutter Developer Assignment: Implement 4D Scrolling for Video-to-Video App**
+## Flutter Developer Assignment: Implement 4D Scrolling for Video-to-Video App
 
-#### **Objective:**
+### Objective
 
-Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experience that allows users to interact seamlessly with video feeds and their video replies. The goal is to create an immersive experience where users can smoothly scroll through videos and view their corresponding replies, which are also videos.
+Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experience that enables users to seamlessly browse video feeds and their video replies. The goal is to create an immersive and smooth scrolling interface where users can easily navigate through videos and their corresponding video replies.
 
----
 
-#### **Reference Links:**
+### Reference Links
 
-- Excalidraw Diagram:  
+- **Excalidraw Diagram:**  
   [https://excalidraw.com/#json=NYW7oKLeXbjnMtQgm6iCk,akFQaE3U5-lOCNcYmAYHgA](https://excalidraw.com/#json=NYW7oKLeXbjnMtQgm6iCk,akFQaE3U5-lOCNcYmAYHgA)
 
-- Wemotions Team/Project Photos and Videos:  
+- **Wemotions Team/Project Photos and Videos:**  
   [https://photos.app.goo.gl/zeEeBYYmPxtqD6Gd6](https://photos.app.goo.gl/zeEeBYYmPxtqD6Gd6)
 
----
 
-#### **Tasks:**
+### Tasks
 
-1. **API Integration:**
+#### 1. API Integration
 
-   * **Endpoints to Use:**
+- Use the following endpoints:
 
-     * `https://api.wemotions.app/feed?page=1` — Fetches the list of video feeds (main videos).  
-     * `https://api.wemotions.app/posts/{id}/replies` — Fetches video replies associated with a specific video post.
+  - `https://api.wemotions.app/feed?page=1` — Fetch the list of main video feeds.  
+  - `https://api.wemotions.app/posts/{id}/replies` — Fetch video replies linked to a specific video post.
 
-   * **Expected Outcome:**
+- Requirements:
 
-     * Display video feeds dynamically.  
-     * When a user taps on a video, fetch the replies (which are also videos) and show them seamlessly beneath the main video.  
-     * Implement lazy loading for both video feeds and video replies to optimize the experience.
+  - Dynamically display video feeds from the API.  
+  - On tapping a video, fetch and display its video replies beneath it.  
+  - Implement lazy loading for both video feeds and replies to optimize data usage and performance.
 
-2. **4D Scrolling Implementation:**
+#### 2. 4D Scrolling Implementation
 
-   * Implement a smooth, immersive 4D scrolling experience, where:
+- Create a smooth, immersive 4D scrolling experience:
 
-     * **Vertical Scrolling:** Navigate through the video feeds.  
-     * **Horizontal/Vertical Scrolling:** Scroll through the video replies beneath each main video.  
-     * **Video Interactivity:** Allow users to play or pause videos when scrolling and interacting with them.
+  - **Vertical Scrolling:** Navigate through the list of main video feeds.  
+  - **Nested Scrolling:** Allow vertical or horizontal scrolling through video replies under each main video.  
+  - **Video Interactivity:** Enable play/pause functionality for videos during scrolling and user interaction.
 
-3. **Performance Optimization:**
+#### 3. Performance Optimization
 
-   * Ensure that both the video feed and video replies are rendered efficiently to minimize app lag.  
-   * Implement lazy loading techniques to ensure that video data (both feeds and replies) is fetched only when needed.
+- Ensure efficient rendering of both video feeds and replies to prevent lag or stutters.  
+- Apply lazy loading techniques to fetch video data only when necessary, reducing memory usage and network overhead.
 
-4. **UI/UX Consistency:**
+#### 4. UI/UX Consistency
 
-   * Maintain consistency with the app's design, ensuring the video elements align with the overall aesthetic of the app.  
-   * Ensure that the user can easily identify the main video and its replies and can smoothly transition between the two.
+- Align all video elements with the app’s existing design and visual style.  
+- Clearly distinguish main videos from their replies and enable smooth transitions between them.
 
-5. **Error Handling:**
+#### 5. Error Handling
 
-   * Properly handle errors such as failed API calls or no video replies, providing a graceful fallback in case of issues.
+- Gracefully handle API failures or cases where no video replies are available.  
+- Provide appropriate fallback UI or messages in such scenarios.
 
----
 
-#### **How to Submit the Project:**
+### Submission Instructions
 
-1. **Fork the GitHub Repository:**
+1. **Fork the GitHub Repository**
 
-   * Fork and clone the provided GitHub repository. The repository already includes several features, so your task is to implement the 4D scrolling and video-to-video interaction functionality.
+   - Fork and clone the repository provided for the project.  
+   - The repository contains existing features; your task is to implement 4D scrolling and video-to-video reply functionality.
 
-2. **Raise a Pull Request:**
+2. **Raise a Pull Request**
 
-   * Once the feature is implemented, test it thoroughly to ensure no bugs or crashes occur.  
-   * Raise a pull request with a detailed description of the changes made (e.g., "Implemented 4D scrolling with video replies integration").
+   - Thoroughly test your implementation to ensure stability and bug-free operation.  
+   - Submit a pull request describing the changes (e.g., “Implemented 4D scrolling with video replies integration”).
 
-3. **Submit the APK:**
+3. **Submit APK**
 
-   * Build and attach the APK to the pull request.  
-   * Ensure that the APK is free of bugs and works properly on both Android and iOS devices.
+   - Build the APK and attach it to your pull request.  
+   - Ensure the APK works smoothly on both Android and iOS devices without issues.
 
----
 
-#### **Evaluation Criteria:**
+### Evaluation Criteria
 
-* **Functionality:** All features must work seamlessly, with no crashes or errors during interaction.  
-* **Performance:** The scrolling experience should be smooth, without lag, and should efficiently load video data.  
-* **User Experience:** The app should feel immersive, responsive, and intuitive, with smooth transitions between videos and their replies.  
-* **Code Quality:** The code should be clean, well-organized, and follow best practices.
+- **Functionality:** All assigned features work correctly without crashes or errors.  
+- **Performance:** Scrolling is smooth and video data loads efficiently.  
+- **User Experience:** The app delivers an immersive, responsive, and intuitive navigation experience.  
+- **Code Quality:** Code is clean, modular, well-documented, and follows best practices.
