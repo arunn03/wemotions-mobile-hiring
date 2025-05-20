@@ -7,72 +7,88 @@ To build and run the app on your device, do the following:
 -   [Install Flutter](https://flutter.dev/docs/get-started/install/) by following the instructions on their website.
 -   Fork/clone this repo to your computer using `https://github.com/FlicLabs/wemotions-mobile.git`.
 -   Connect your devices/emulators and run the app using `flutter run` in the root of the project directory.
-# wemotions-mobile-hiring
+# Wemotions Mobile Hiring: Flutter Developer Assignment
 
+---
 
-### **Flutter Developer Assignment: Implement 4D Scrolling for Video-to-Video App**
+### **Objective:**  
+Implement a seamless **4D scrolling** experience in the Wemotions mobile app, enabling users to interact fluidly with video feeds and their video replies.
 
-#### **Objective:**
+---
 
-Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experience that allows users to interact seamlessly with video feeds and their video replies. The goal is to create an immersive experience where users can smoothly scroll through videos and view their corresponding replies, which are also videos.
+### **Overview:**  
+The assignment focuses on integrating two APIs to dynamically display video feeds and their replies as videos, implementing immersive 4D scrolling (vertical + nested scrolls), with an emphasis on performance and UX.
 
-#### **Tasks:**
+---
 
-1. **API Integration:**
+### **Resources:**
 
-   * **Endpoints to Use:**
+- **API Endpoints:**
+  - `https://api.wemotions.app/feed?page=1` — Fetch main video feeds.
+  - `https://api.wemotions.app/posts/{id}/replies` — Fetch video replies per post.
 
-     * `https://api.wemotions.app/feed?page=1` — Fetches the list of video feeds (main videos).
-     * `https://api.wemotions.app/posts/{id}/replies` — Fetches video replies associated with a specific video post.
+- **Visual & Concept References:**
+  - Flow diagram and UI mockups on Excalidraw:  
+    [Excalidraw Visual Flow](https://excalidraw.com/#json=NYW7oKLeXbjnMtQgm6iCk,akFQaE3U5-lOCNcYmAYHgA)
+  - Related images and video examples:  
+    [Google Photos Folder](https://photos.app.goo.gl/zeEeBYYmPxtqD6Gd6)
 
-   * **Expected Outcome:**
+---
 
-     * Display video feeds dynamically.
-     * When a user taps on a video, fetch the replies (which are also videos) and show them seamlessly beneath the main video.
-     * Implement lazy loading for both video feeds and video replies to optimize the experience.
+### **Assignment Details:**
 
-2. **4D Scrolling Implementation:**
+#### 1. API Integration
+- Fetch and display video feeds dynamically from the feed API.
+- On video tap, fetch the corresponding video replies and display them inline below the main video.
+- Use **lazy loading** to fetch feeds and replies on demand, improving performance.
 
-   * Implement a smooth, immersive 4D scrolling experience, where:
+#### 2. 4D Scrolling Implementation
+- Implement vertical scrolling for navigating the main video feed.
+- Implement horizontal and/or vertical nested scrolling for video replies under each main video.
+- Enable interactive video playback controls during scroll (play, pause).
+- Ensure smooth, immersive transitions between main videos and their replies.
 
-     * **Vertical Scrolling:** Navigate through the video feeds.
-     * **Horizontal/Vertical Scrolling:** Scroll through the video replies beneath each main video.
-     * **Video Interactivity:** Allow users to play or pause videos when scrolling and interacting with them.
+#### 3. Performance Optimization
+- Optimize rendering to avoid lag, freezing, or heavy memory use.
+- Use efficient state management to prevent unnecessary re-renders.
+- Load video data incrementally as users scroll.
 
-3. **Performance Optimization:**
+#### 4. UI/UX Consistency
+- Match the app’s current design style and visual language.
+- Clearly distinguish main videos from replies.
+- Ensure smooth user experience with intuitive controls and gestures.
 
-   * Ensure that both the video feed and video replies are rendered efficiently to minimize app lag.
-   * Implement lazy loading techniques to ensure that video data (both feeds and replies) is fetched only when needed.
+#### 5. Error Handling
+- Gracefully handle API failures or absence of replies.
+- Display meaningful fallback messages or UI states.
 
-4. **UI/UX Consistency:**
+---
 
-   * Maintain consistency with the app's design, ensuring the video elements align with the overall aesthetic of the app.
-   * Ensure that the user can easily identify the main video and its replies and can smoothly transition between the two.
+### **Submission Instructions:**
 
-5. **Error Handling:**
+1. Fork and clone the Wemotions GitHub repository provided.
+2. Implement the 4D scrolling and video-to-video reply features within the existing codebase.
+3. Thoroughly test on Android and iOS devices for stability and performance.
+4. Raise a pull request with:
+   - Detailed description of your implementation.
+   - Screenshots or screen recordings showcasing the feature.
+5. Attach a working APK file to the pull request for review.
 
-   * Properly handle errors such as failed API calls or no video replies, providing a graceful fallback in case of issues.
+---
 
-#### **How to Submit the Project:**
+### **Evaluation Criteria:**
 
-1. **Fork the GitHub Repository:**
+| Criterion           | Description                                               |
+|---------------------|-----------------------------------------------------------|
+| **Functionality**   | Smooth, bug-free interaction with feed and replies videos.|
+| **Performance**    | No lag, optimized loading and rendering.                   |
+| **User Experience**| Immersive, intuitive 4D scrolling with easy navigation.   |
+| **Code Quality**   | Clean, modular, maintainable, and well-documented code.    |
 
-   * Fork and clone the provided GitHub repository. The repository already includes several features, so your task is to implement the 4D scrolling and video-to-video interaction functionality.
+---
 
-2. **Raise a Pull Request:**
+Please refer to the visual flow and UI wireframes on [Excalidraw](https://excalidraw.com/#json=NYW7oKLeXbjnMtQgm6iCk,akFQaE3U5-lOCNcYmAYHgA) and example images/videos in the [Google Photos folder](https://photos.app.goo.gl/zeEeBYYmPxtqD6Gd6) for better context on the expected experience and design style.
 
-   * Once the feature is implemented, test it thoroughly to ensure no bugs or crashes occur.
-   * Raise a pull request with a detailed description of the changes made (e.g., "Implemented 4D scrolling with video replies integration").
+---
 
-3. **Submit the APK:**
-
-   * Build and attach the APK to the pull request.
-   * Ensure that the APK is free of bugs and works properly on both Android and iOS devices.
-
-#### **Evaluation Criteria:**
-
-* **Functionality:** All features must work seamlessly, with no crashes or errors during interaction.
-* **Performance:** The scrolling experience should be smooth, without lag, and should efficiently load video data.
-* **User Experience:** The app should feel immersive, responsive, and intuitive, with smooth transitions between videos and their replies.
-* **Code Quality:** The code should be clean, well-organized, and follow best practices.
-
+If you need further clarifications or assistance, feel free to ask!
