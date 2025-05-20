@@ -20,10 +20,13 @@ Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experien
 ### Reference Links
 
 - **Nested Pagination Flowchart:**  
-  [https://excalidraw.com/#json=NYW7oKLeXbjnMtQgm6iCk,akFQaE3U5-lOCNcYmAYHgA](https://excalidraw.com/#json=NYW7oKLeXbjnMtQgm6iCk,akFQaE3U5-lOCNcYmAYHgA)
+  ![image](https://github.com/user-attachments/assets/cb3bc684-e808-486e-aeca-74904ceb6867)
+
 
 - **4D Scrolling Explanation Video:**  
-  [https://photos.app.goo.gl/zeEeBYYmPxtqD6Gd6](https://photos.app.goo.gl/zeEeBYYmPxtqD6Gd6)
+  [![Video Preview](https://github.com/user-attachments/assets/2ef5adba-29a3-49d3-afe0-3dbf2db2f812)](https://drive.google.com/file/d/1wc2NeQ3_Wu1yv_O_hec9HtkO-58G7HuQ/preview?usp=sharing)
+
+
 
 
 ### Tasks
