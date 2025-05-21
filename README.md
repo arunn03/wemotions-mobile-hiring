@@ -70,25 +70,22 @@ Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experien
 
 ### Submission Instructions
 
-1. **Fork the GitHub Repository**
+1. **GitHub Repository Link**  
+   Please share your GitHub repository link containing your implementation so our engineering team can review the code quality and overall solution.
 
-   - Fork and clone the repository provided for the project.  
-   - The repository contains existing features; your task is to implement 4D scrolling and video-to-video reply functionality.
+2. **Introductory Video**  
+   Submit a short video (around 30 seconds) introducing yourself to help our HR team verify your profile.
 
-2. **Raise a Pull Request**
+3. **Demo Video**  
+   Provide a 2-minute video demonstrating the app with the 4D scrolling feature implemented, allowing our HR team to evaluate your submission before forwarding it to the technical team.
 
-   - Thoroughly test your implementation to ensure stability and bug-free operation.  
-   - Submit a pull request describing the changes (e.g., “Implemented 4D scrolling with video replies integration”).
-
-3. **Submit APK**
-
-   - Build the APK and attach it to your pull request.  
-   - Ensure the APK works smoothly on both Android and iOS devices without issues.
+4. **Built APK**  
+   Include the built APK file so our engineers can test the app and validate the implementation’s functionality.
 
 
 ### Evaluation Criteria
 
 - **Functionality:** All assigned features work correctly without crashes or errors.  
-- **Performance:** Scrolling is smooth and video data loads efficiently.  
+- **Performance:** Scrolling is smooth, and video data loads efficiently.  
 - **User Experience:** The app delivers an immersive, responsive, and intuitive navigation experience.  
 - **Code Quality:** Code is clean, modular, well-documented, and follows best practices.
