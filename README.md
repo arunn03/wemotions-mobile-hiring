@@ -43,7 +43,7 @@ Fetch video replies linked to a specific video post.
 https://api.wemotions.app/posts/{id}/replies?page=1&page_size=5
 ```
 
-- Requirements:
+## Requirements:
 
   - Dynamically display video feeds from the API.
   - Implement lazy loading for video feeds and replies to optimize data usage and performance.
@@ -75,7 +75,8 @@ https://api.wemotions.app/posts/{id}/replies?page=1&page_size=5
 
 Each dot represents a **page of videos or replies** — think of them as “batches” of 5 videos each.
 
-- The letter **“H”** means **Home** or the **main feed**.
+- The letter **“H”** means **Home** or the **main parent at home**.
+- The letter **“P”** means **Parent** or the **parent video**.
 - The **number inside the dots** shows how many more videos or replies are left to load beyond what you see now.
 - A **filled or crossed dot** shows the **current page** being viewed or loaded.
 - These dots help users see how much content there is and track where they are while browsing.
