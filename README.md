@@ -1,7 +1,5 @@
 # WeMotions
 
-## Building
-
 To build and run the app on your device, do the following:
 
 -   [Install Flutter](https://flutter.dev/docs/get-started/install/) by following the instructions on their website.
@@ -34,11 +32,11 @@ Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experien
 
 - Use the following endpoints:
 
-Fetch the list of main video feeds. 
+Fetch the list of main video feed. 
 ```bash 
 https://api.wemotions.app/feed?page=1&page_size=5
 ```  
-Fetch video replies linked to a specific video post. 
+Fetch video replies linked to a specific video. 
 ```bash
 https://api.wemotions.app/posts/{id}/replies?page=1&page_size=5
 ```
@@ -52,34 +50,38 @@ https://api.wemotions.app/posts/{id}/replies?page=1&page_size=5
 
 - Create a smooth, immersive 4D scrolling experience:
 
-  - **Vertical Scrolling:** Navigate through the list of main video feeds.  
-  - **Nested Scrolling:** Allow vertical or horizontal scrolling through video replies under each main video.  
+  - **Vertical Scrolling:** Navigate through the list of main video feed. 
+  - **Nested Scrolling:** Allow vertical or horizontal scrolling through video replies under each main video.
   - **Video Interactivity:** Enable play/pause functionality for videos during scrolling and user interaction.
 
 #### 3. Performance Optimization
 
-- Ensure efficient rendering of both video feeds and replies to prevent lag or stutters.  
+- Ensure efficient rendering of both video feeds and replies to prevent lag or stutters.
 - Apply lazy loading techniques to fetch video data only when necessary, reducing memory usage and network overhead.
 
 #### 4. UI/UX Consistency
 
-- Align all video elements with the app’s existing design and visual style.  
+- Align all video elements with the app’s existing design and visual style.
 - Clearly distinguish main videos from their replies and enable smooth transitions between them.
 
 #### 5. Error Handling
 
-- Gracefully handle API failures or cases where no video replies are available.  
+- Gracefully handle API failures or cases where no video replies are available.
 - Provide appropriate fallback UI or messages in such scenarios.
 
-### Dot (.) Indicators — What Do They Mean?
+### 6. Dot (.) Indicators — What Do They Mean?
 
 Each dot represents a **page of videos or replies** — think of them as “batches” of 5 videos each.
 
-- The letter **“H”** means **Home** or the **main parent at home**.
-- The letter **“P”** means **Parent** or the **parent video**.
+- The letter **“H”** means **Home** pointing the **main parent at home feed**.
+- The letter **“P”** means **Parent** or the **parent video of current replies**.
 - The **number inside the dots** shows how many more videos or replies are left to load beyond what you see now.
 - A **filled dot** shows the **current video** being viewed.
 - These dots help users see how much content there is and track where they are while browsing.
+
+## Final Output 
+- Final output should look simillar as shown in the video.
+[final video()]
 
 ### Submission Instructions
 
