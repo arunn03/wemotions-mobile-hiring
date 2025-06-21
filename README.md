@@ -30,14 +30,14 @@ Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experien
 
 - Use the following endpoints:
 
-  - `https://api.wemotions.app/feed?page=1` — Fetch the list of main video feeds.  
-  - `https://api.wemotions.app/posts/{id}/replies` — Fetch video replies linked to a specific video post.
+  - `https://api.wemotions.app/feed?page=1&page_size=10` — Fetch the list of main video feeds.  
+  - `https://api.wemotions.app/posts/{id}/replies?page=1&page_size=20` — Fetch video replies linked to a specific post.
 
 - Requirements:
 
   - Dynamically display video feeds from the API.  
-  - On tapping a video, fetch and display its video replies beneath it.  
-  - Implement lazy loading for both video feeds and replies to optimize data usage and performance.
+  - On scrolling a video, fetch and display its video replies beneath it.  
+  - Implement lazy loading for video feeds and replies to optimize data usage and performance.
 
 #### 2. 4D Scrolling Implementation
 
@@ -69,7 +69,7 @@ Each dot represents a **page of videos or replies** — think of them as “batc
 - The letter **“H”** means **Home** or the **main feed**.
 - The **number inside the dots** shows how many more videos or replies are left to load beyond what you see now.
 - A **filled or crossed dot** shows the **current page** being viewed or loaded.
-- These dots help users see how much content is there and track where they are while browsing.
+- These dots help users see how much content there is and track where they are while browsing.
 
 ### Submission Instructions
 
