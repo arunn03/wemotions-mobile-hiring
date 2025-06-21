@@ -87,10 +87,10 @@ Each dot represents a **page of videos or replies** — think of them as “batc
    Please share your GitHub repository link containing your implementation so our engineering team can review the code quality and overall solution.
 
 2. **Introductory Video**  
-   Submit a short video (around 30 seconds) introducing yourself to help our HR team verify your profile.
+   Submit a short video (around 30 seconds) introducing yourself to help our HR team to verify your profile.
 
 3. **Demo Video**  
-   Provide a 2-minute video demonstrating the app with the 4D scrolling feature implemented, allowing our HR team to evaluate your submission before forwarding it to the technical team.
+   Provide a 2-minute video demonstrating of the app where you are playing with the 4D scrolling feature implemented you, allowing our HR team to evaluate your submission before forwarding it to the technical team.
 
 4. **Built APK**  
    Include the built APK file so our engineers can test the app and validate the implementation’s functionality.
