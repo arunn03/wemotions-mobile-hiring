@@ -78,12 +78,12 @@ Each dot represents a **page of videos or replies** — think of them as “batc
 - The letter **“H”** means **Home** or the **main parent at home**.
 - The letter **“P”** means **Parent** or the **parent video**.
 - The **number inside the dots** shows how many more videos or replies are left to load beyond what you see now.
-- A **filled or crossed dot** shows the **current page** being viewed or loaded.
+- A **filled dot** shows the **current video** being viewed.
 - These dots help users see how much content there is and track where they are while browsing.
 
 ### Submission Instructions
 
-1. **GitHub Repository Link**  
+1. **GitHub Repository Link**
    Please share your GitHub repository link containing your implementation so our engineering team can review the code quality and overall solution.
 
 2. **Introductory Video**  
