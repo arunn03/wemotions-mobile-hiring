@@ -5,10 +5,14 @@
 To build and run the app on your device, do the following:
 
 -   [Install Flutter](https://flutter.dev/docs/get-started/install/) by following the instructions on their website.
--   Fork/clone this repo to your computer using `https://github.com/FlicLabs/wemotions-mobile.git`.
+-   Fork/clone this repo to your computer using 
+
+```bash
+https://github.com/FlicLabs/wemotions-mobile.git
+```
+
 -   Connect your devices/emulators and run the app using `flutter run` in the root of the project directory.
 
-# Wemotions Mobile Hiring
 
 ## Flutter Developer Assignment: Implement 4D Scrolling for Video-to-Video App
 
@@ -30,13 +34,18 @@ Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experien
 
 - Use the following endpoints:
 
-  - `https://api.wemotions.app/feed?page=1&page_size=10` — Fetch the list of main video feeds.  
-  - `https://api.wemotions.app/posts/{id}/replies?page=1&page_size=20` — Fetch video replies linked to a specific post.
+Fetch the list of main video feeds. 
+```bash 
+https://api.wemotions.app/feed?page=1&page_size=5
+```  
+Fetch video replies linked to a specific video post. 
+```bash
+https://api.wemotions.app/posts/{id}/replies?page=1&page_size=5
+```
 
 - Requirements:
 
-  - Dynamically display video feeds from the API.  
-  - On scrolling a video, fetch and display its video replies beneath it.  
+  - Dynamically display video feeds from the API.
   - Implement lazy loading for video feeds and replies to optimize data usage and performance.
 
 #### 2. 4D Scrolling Implementation
