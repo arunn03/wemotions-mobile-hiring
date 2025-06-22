@@ -9,7 +9,8 @@ To build and run the app on your device, do the following:
 https://github.com/FlicLabs/wemotions-mobile.git
 ```
 
--   Connect your devices/emulators and run the app using `flutter run` in the root of the project directory.
+- Use Flutter **FVM** to setup project.
+- Connect your devices/emulators and run the app using `flutter run` in the root of the project directory.
 
 
 ## Flutter Assignment: Implement 4D Scrolling
