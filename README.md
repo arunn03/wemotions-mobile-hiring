@@ -108,4 +108,4 @@ Each dot represents a **page of videos or replies** — think of them as “batc
 - **Functionality:** All assigned features work correctly without crashes or errors.  
 - **Performance:** Scrolling is smooth, and video data loads efficiently.  
 - **User Experience:** The app delivers an immersive, responsive, and intuitive navigation experience.  
-- **Code Quality:** Code is clean, modular, well-documented, and follows best practices.
+- **Code Quality:** Code is clean, modular, well-documented, and [follows best practices](./BestPracticeToFollow.md).
