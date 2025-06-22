@@ -12,7 +12,7 @@ https://github.com/FlicLabs/wemotions-mobile.git
 -   Connect your devices/emulators and run the app using `flutter run` in the root of the project directory.
 
 
-## Flutter Developer Assignment: Implement 4D Scrolling for Video-to-Video App
+## Flutter Assignment: Implement 4D Scrolling
 
 ### Objective
 
