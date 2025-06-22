@@ -26,6 +26,9 @@ Enhance the Wemotions mobile app by implementing a dynamic 4D scrolling experien
 - **4D Scrolling Explanation Video:**  
   [![Video Preview](https://github.com/user-attachments/assets/2ef5adba-29a3-49d3-afe0-3dbf2db2f812)](https://drive.google.com/file/d/1wc2NeQ3_Wu1yv_O_hec9HtkO-58G7HuQ/preview?usp=sharing)
 
+- **App video demonstraction 👇:**  
+  [![App Preview](https://github.com/user-attachments/assets/3207e1a5-9b72-4822-9333-d8545a3312d7)](https://drive.google.com/file/d/1XwSfpa1iaNB5h28Km8KwwvHQ8No7QEa1/preview?usp=sharing)
+
 ### Tasks
 
 #### 1. API Integration
