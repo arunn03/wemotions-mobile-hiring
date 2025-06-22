@@ -73,6 +73,8 @@ https://api.wemotions.app/posts/{id}/replies?page=1&page_size=5
 - Provide appropriate fallback UI or messages in such scenarios.
 
 ### 6. Dot (.) Indicators — What Do They Mean?
+![image](https://github.com/user-attachments/assets/6c86513a-9bfc-4650-9efe-ec96eec74952)
+
 
 Each dot represents a **page of videos or replies** — think of them as “batches” of 5 videos each.
 
@@ -84,7 +86,7 @@ Each dot represents a **page of videos or replies** — think of them as “batc
 
 ## Final Output 
 - Final output should look simillar as shown in the video.
-[final video()]
+[final expected result](https://drive.google.com/file/d/1XwSfpa1iaNB5h28Km8KwwvHQ8No7QEa1/preview?usp=sharing)
 
 ### Submission Instructions
 
