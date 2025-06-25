@@ -1,6 +1,6 @@
 import 'dart:developer';
-import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
-import 'package:ffmpeg_kit_flutter/return_code.dart';
+import 'package:ffmpeg_kit_https_flutter/ffmpeg_kit.dart';
+import 'package:ffmpeg_kit_https_flutter/return_code.dart';
 import 'package:screen_brightness/screen_brightness.dart';
 import 'package:socialverse/export.dart';
 
@@ -703,7 +703,7 @@ class CameraProvider extends ChangeNotifier {
 
   // ======================================================================
 
-  /// Merges all video segments into a single video file using ffmpeg_kit_flutter
+  /// Merges all video segments into a single video file using ffmpeg_kit_https_flutter
   Future<XFile?> mergeVideoSegments() async {
     if (_videoSegments.isEmpty) return null;
 
@@ -961,8 +961,8 @@ class CameraProvider extends ChangeNotifier {
 
 
 // import 'dart:developer';
-// import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
-// import 'package:ffmpeg_kit_flutter/return_code.dart';
+// import 'package:ffmpeg_kit_https_flutter/ffmpeg_kit.dart';
+// import 'package:ffmpeg_kit_https_flutter/return_code.dart';
 // import 'package:socialverse/export.dart';
 //
 // class CameraProvider extends ChangeNotifier {

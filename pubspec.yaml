@@ -8,12 +8,16 @@ environment:
   sdk: ">=2.19.0 <4.0.0"
 
 dependencies:
-  firebase_core: ^3.1.1
-  firebase_crashlytics: ^4.0.2
-  firebase_messaging: ^15.0.2
+  firebase_core: ^2.24.2 # Instead of ^3.1.1
+  firebase_crashlytics: ^3.4.9 # Instead of ^4.0.2
+  firebase_messaging: ^14.7.10 # Instead of ^15.0.2
+  firebase_auth: ^4.15.3 # Instead of ^5.2.0
+  # firebase_core: ^3.1.1
+  # firebase_crashlytics: ^4.0.2
+  # firebase_messaging: ^15.0.2
   google_sign_in: ^6.1.6
   sign_in_with_apple: ^5.0.0
-  firebase_auth: ^5.2.0
+  # firebase_auth: ^5.2.0
 
   cached_network_image: ^3.2.0
   image_cropper: ^4.0.1
@@ -37,7 +41,7 @@ dependencies:
 
   camera: ^0.11.0
   screen_brightness:
-  ffmpeg_kit_flutter: ^6.0.3
+  ffmpeg_kit_https_flutter: ^0.0.6
 
   lottie: ^2.2.0
   move_to_background: ^1.0.2
@@ -46,8 +50,8 @@ dependencies:
   permission_handler: ^10.1.0
   share_plus: ^7.0.0
   wechat_assets_picker: ^9.3.3
-  url_launcher: ^6.3.1
-  url_launcher_ios: ^6.3.1
+  url_launcher: ^6.3.0
+  url_launcher_ios: ^6.3.0
   qr_flutter: ^4.0.0
   qr_code_scanner: ^1.0.1
   pretty_qr_code: ^3.3.0
