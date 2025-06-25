@@ -20,74 +20,57 @@ class SubverseScreen extends StatelessWidget {
               __.loading = true;
               __.currentSortedPosts.clear();
               __.posts_page = 1;
-              if(!logged_in!){
-                __.loading = false;
-                return Future.value();
-              }
+              // if(!logged_in!){
+              //   __.loading = false;
+              //   return Future.value();
+              // }
               await __.fetchCurrentSortedPosts;
             },
-            child: SingleChildScrollView(
-              physics: AlwaysScrollableScrollPhysics(),
-              child: Stack(
-                children: [
-
-                  if (!__.loading) ...[
-                    GridView.builder(
-                      controller: __.controller,
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.only(top: 20),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 1,
-                        mainAxisSpacing: 1,
-                        childAspectRatio: 0.65,
-                      ),
-                      itemCount: __.currentSortedPosts.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return SubversePostGridItem(
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              VideoWidget.routeName,
-                              arguments: VideoWidgetArgs(
-                                posts: __.currentSortedPosts,
-                                pageController:
-                                    PageController(initialPage: index),
-                                pageIndex: index,
-                              ),
-                            );
-                          },
-                          imageUrl: __.currentSortedPosts[index].thumbnailUrl,
-                          createdAt: __.currentSortedPosts[index].createdAt,
-                          viewCount: __.currentSortedPosts[index].viewCount,
-                          username: __.currentSortedPosts[index].username,
-                          pictureUrl: __.currentSortedPosts[index].pictureUrl,
-
+            child: __.loading
+              ? GridView.builder(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: const EdgeInsets.only(top: 20),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 1,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.65,
+                  ),
+                  itemCount: 12,
+                  itemBuilder: (_, __) => SubversePostGridPlaceholder(),
+                )
+              : GridView.builder(
+                  controller: __.controller,
+                  physics: AlwaysScrollableScrollPhysics(),
+                  padding: const EdgeInsets.only(top: 20),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 1,
+                    mainAxisSpacing: 1,
+                    childAspectRatio: 0.65,
+                  ),
+                  itemCount: __.currentSortedPosts.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return SubversePostGridItem(
+                      onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          VideoWidget.routeName,
+                          arguments: VideoWidgetArgs(
+                            posts: __.currentSortedPosts,
+                            pageController: PageController(initialPage: index),
+                            pageIndex: index,
+                          ),
                         );
                       },
-                    ),
-                  ],
-                  if (__.loading) ...[
-                    GridView.builder(
-                      shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
-                      padding: const EdgeInsets.only(top: 20),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        crossAxisSpacing: 1,
-                        mainAxisSpacing: 1,
-                        childAspectRatio: 0.65,
-                      ),
-                      itemCount: 12,
-                      itemBuilder: (_, __) {
-                        return SubversePostGridPlaceholder();
-                      },
-                    ),
-                  ],
-                ],
-              ),
-            ),
+                      imageUrl: __.currentSortedPosts[index].thumbnailUrl,
+                      createdAt: __.currentSortedPosts[index].createdAt,
+                      viewCount: __.currentSortedPosts[index].viewCount,
+                      username: __.currentSortedPosts[index].username,
+                      pictureUrl: __.currentSortedPosts[index].pictureUrl,
+                    );
+                  },
+                ),
           ),
         );
       },
