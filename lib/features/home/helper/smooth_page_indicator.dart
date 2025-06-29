@@ -6,96 +6,6 @@ class SmoothPageIndicatorView extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  List<Widget> _buildDots({
-    required SmoothPageIndicatorProvider provider,
-    required int totalCount,
-    required int currentIndex,
-    required bool isHorizontal,
-    required int visibleDots,
-  }) {
-    List<Widget> dots = [];
-
-    if (totalCount == 0) {
-      dots.clear();
-      return dots;
-    }
-
-    int start = currentIndex - 1;
-    int end = currentIndex + 1;
-
-    if (start < 0) {
-      start = 0;
-      end = math.min(visibleDots - 1, totalCount - 1);
-    } else if (end >= totalCount) {
-      end = totalCount - 1;
-      start = math.max(end - (visibleDots - 1), 0);
-    }
-
-    // Add leading more indicator if needed
-    // if (start > 0) {
-    //   dots.add(
-    //     Indicator(
-    //       isActive: false,
-    //       isHorizontal: isHorizontal,
-    //       isMoreIndicator: true,
-    //     ),
-    //   );
-    // }
-
-    // Add main dots
-    for (int i = start; i <= end; i++) {
-      if (!isHorizontal) {
-        dots.add(
-          Row(
-            children: [
-              Indicator(
-                isActive: provider.onReply ? false : i == currentIndex,
-                isHorizontal: isHorizontal,
-                makeTransparent:
-                    provider.onReply && i != currentIndex ? true : false,
-              ),
-              if (provider.totalHorizontalPages != -1 &&
-                  provider.currentHorizontalIndex != -1 &&
-                  provider.currentVerticalIndex != -1 &&
-                  provider.totalHorizontalPages != 0 &&
-                  i == currentIndex)
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: _buildDots(
-                    provider: provider,
-                    totalCount: provider.totalHorizontalPages,
-                    currentIndex: provider.currentHorizontalIndex,
-                    isHorizontal: true,
-                    visibleDots: provider.horizontalVisibleDots,
-                  ),
-                ),
-            ],
-          ),
-        );
-      } else {
-        dots.add(
-          Indicator(
-            isActive: provider.onReply ? i == currentIndex : false,
-            isHorizontal: isHorizontal,
-          ),
-        );
-      }
-    }
-
-    // // Add trailing more indicator if needed
-    // if (end < totalCount - 1) {
-    //   dots.add(
-    //     Indicator(
-    //       isActive: false,
-    //       isHorizontal: isHorizontal,
-    //       isMoreIndicator: true,
-    //     ),
-    //   );
-    // }
-
-    return dots;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Consumer<SmoothPageIndicatorProvider>(
@@ -106,42 +16,86 @@ class SmoothPageIndicatorView extends StatelessWidget {
           return SizedBox.shrink();
         }
 
-        // Calculate offset to ensure horizontal indicator overlaps vertical active indicator
-        double verticalOffset = 0;
-        if (provider.currentVerticalIndex != -1) {
-          // Calculate position based on current index (accounting for more indicators)
-          // int visibleVerticalPosition = 0;
-          // if (provider.currentVerticalIndex > 0) {
-          //   visibleVerticalPosition++; // Account for leading more indicator
-          // }
-          verticalOffset = (provider.currentVerticalIndex == 0 ? 0 : 1) +
-              (provider.currentVerticalIndex -
-                  math.max(0, provider.currentVerticalIndex - 1));
-        }
-
         return Container(
-          // width: 72,
-          height: 82,
-          child: Stack(
-            alignment: Alignment.center,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              // Vertical indicators
-              Padding(
-                padding: EdgeInsets.only(
-                    left: provider.totalHorizontalPages >= 2
-                        ? (cs.width(context) / 4.5) / (3.2)
-                        : (cs.width(context) / 4.5) / (1.9)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: _buildDots(
-                    provider: provider,
-                    totalCount: provider.totalVerticalPages,
-                    currentIndex: provider.currentVerticalIndex,
-                    isHorizontal: false,
-                    visibleDots: provider.verticalVisibleDots,
+              provider.onReply || provider.currentVerticalIndex == 0
+                ? height20 : Container(
+                  width: 20,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.white
+                  ),
+                  child: Text(
+                    "${provider.currentVerticalIndex}",
+                    style: const TextStyle(color: Colors.black),
+                    textAlign: TextAlign.center,
                   ),
                 ),
+              height5,
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  provider.onReply
+                    ? Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.white
+                      ),
+                      child: Text(
+                        provider.currentHorizontalIndex == 0
+                          ? "P" : "${provider.currentHorizontalIndex+1}",
+                        style: const TextStyle(color: Colors.black),
+                        textAlign: TextAlign.center,
+                      ),
+                    ) : width20,
+                  width5,
+                  Container(
+                    width: 15,
+                    height: 15,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.yellow
+                    ),
+                  ),
+                  width5,
+                  provider.totalHorizontalPages > 0 && (!provider.onReply || provider.currentHorizontalIndex+1 < provider.totalHorizontalPages)
+                    ? Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.white
+                      ),
+                      child: Text(
+                        provider.onReply
+                          ? "${provider.totalHorizontalPages-provider.currentHorizontalIndex-1}"
+                          : "${provider.totalHorizontalPages}",
+                        style: const TextStyle(color: Colors.black),
+                        textAlign: TextAlign.center,
+                      ),
+                    ) : width20,
+                ],
               ),
+              height5,
+              provider.totalVerticalPages > provider.currentVerticalIndex+1
+                ? Container(
+                  width: 20,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.white
+                  ),
+                  child: Text(
+                    "${provider.totalVerticalPages-provider.currentVerticalIndex-1}",
+                    style: const TextStyle(color: Colors.black),
+                    textAlign: TextAlign.center,
+                  ),
+                ) : height20,
             ],
           ),
         );
